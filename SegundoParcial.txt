@@ -1,0 +1,77 @@
+User:  name: string
+	apellido: string
+	email: string
+	empresa: string
+	notas:string
+
+Empresa: nombre:string
+	web: string
+	notas: string
+	
+	
+POST /gender/:user-id
+Crea un usuario en la agenda
+Retorna:
+		200 en caso de éxito
+		404 si :da errord	
+
+DELETE /gender/:user-id
+elimina un usuario en la agenda
+Retorna:
+		200 en caso de éxito
+		404 si :user no existe	
+
+POST /gender/:nombre
+Crea una empresa en la agenda
+Retorna:
+		200 en caso de éxito
+		404 si : da error	
+
+DELETE /gender/:nombre
+elimina una empresa en la agenda
+Retorna:
+		200 en caso de éxito
+		404 si :empresa no existe	
+
+
+GET /gender/users
+	Obtiene todos los usuarios.
+	
+	Retorna:
+		200 en caso de éxito
+		404 si :user no existe	
+
+GET /gender/bussines
+	Obtiene todas las empresas.
+	
+	Retorna:
+		200 en caso de éxito
+		404 si :empresa no existe	
+
+Get /user/:user-id/dates
+	obtiene datos del usuario.
+	
+	Retorna:
+		201 en caso de éxito
+		404 si :user no existe
+
+Get /empresa/:name/dates
+	obtiene datos de la empresa.
+	
+	Retorna:
+		201 en caso de éxito
+		404 si :empresa no existe		
+
+PATCH /user/:user-id/tasks/:id
+	Actualiza una tarea del usuario dado un id.
+	
+	Retorna:
+		201 en caso de éxito
+		404 si :user-id o :id no existe
+
+DELETE /user/:user-id/tasks/:id
+	Borra una tarea del usuario dado un id.
+	
+	Retorna:
+		200 en caso de éxito
+		404 si :user-id o :id no existe
